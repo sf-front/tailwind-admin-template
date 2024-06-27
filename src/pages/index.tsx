@@ -1,3 +1,8 @@
 export default function Home() {
-  return <main>메인 페이지</main>;
+
+  return (
+    <main>
+      대시보드 페이지
+    </main>
+  );
 }

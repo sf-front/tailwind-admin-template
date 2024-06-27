@@ -32,6 +32,7 @@ const config: Config = {
         bodydark2: "#8A99AF",
         primary: "#3C50E0",
         secondary: "#80CAEE",
+        info: "#80CAEE",
         stroke: "#E2E8F0",
         gray: "#EFF4FB",
         graydark: "#333A48",
@@ -56,6 +57,7 @@ const config: Config = {
         "meta-10": "#0FADCF",
         success: "#219653",
         danger: "#D34053",
+        error: "#D34053",
         warning: "#FFA70B",
       },
       fontSize: {

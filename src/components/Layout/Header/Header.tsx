@@ -1,5 +1,5 @@
 import DarkModeSwitcher from './DarkModeSwitcher';
-import DropdownUser from './DropDownUser';
+import DropdownUser from './DropdownUser';
 
 const Header = (props: {
   sidebarOpen: string | boolean | undefined;
