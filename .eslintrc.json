@@ -1,0 +1,28 @@
+{
+  "extends": ["eslint:recommended", "plugin:@next/next/recommended", "plugin:@typescript-eslint/recommended", "next", "prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "max-len": ["error", { "code": 150, "ignoreTemplateLiterals": true }],
+    "radix": ["error", "as-needed"],
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-param-reassign": ["error", { "props": false }],
+    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^__", "argsIgnorePattern": "^__" }],
+    "prefer-destructuring": ["error", { "object": false, "array": false }],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-empty-function": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["invalidHref"]
+      }
+    ],
+    "prettier/prettier": ["error"]
+  }
+}
