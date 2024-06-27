@@ -11,15 +11,7 @@ type TextareaProps = {
   rows?: number;
 };
 
-const Textarea: React.FC<TextareaProps> = ({
-  label,
-  placeholder,
-  value,
-  onChange,
-  className,
-  disabled = false,
-  rows = 4,
-}) => {
+const Textarea: React.FC<TextareaProps> = ({ label, placeholder, value, onChange, className, disabled = false, rows = 4 }) => {
   // variables
   const baseStyles = 'block w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300';
   const classes = classNames(baseStyles, className, {
@@ -30,14 +22,7 @@ const Textarea: React.FC<TextareaProps> = ({
   return (
     <div className="mb-4">
       {label && <label className="block text-sm font-medium text-gray-700 mb-2 dark:text-gray-300">{label}</label>}
-      <textarea
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        className={classes}
-        disabled={disabled}
-        rows={rows}
-      />
+      <textarea placeholder={placeholder} value={value} onChange={onChange} className={classes} disabled={disabled} rows={rows} />
     </div>
   );
 };

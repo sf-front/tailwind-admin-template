@@ -8,12 +8,7 @@ type CardProps = {
   className?: string;
 };
 
-const Card: React.FC<CardProps> = ({
-  title,
-  description,
-  children,
-  className,
-}) => {
+const Card: React.FC<CardProps> = ({ title, description, children, className }) => {
   // variables
   const baseStyles = 'rounded-lg shadow-lg overflow-hidden bg-white  p-8';
   const classes = classNames(baseStyles, className);

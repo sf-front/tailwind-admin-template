@@ -16,16 +16,8 @@ type SelectBoxProps = {
   disabled?: boolean;
 };
 
-const SelectBox: React.FC<SelectBoxProps> = ({
-  label,
-  options,
-  value,
-  onChange,
-  className,
-  disabled = false,
-}) => {
-  const baseStyles =
-    'block w-full px-3 py-2 border rounded-md appearance-none focus:outline-none focus:ring focus:border-blue-300';
+const SelectBox: React.FC<SelectBoxProps> = ({ label, options, value, onChange, className, disabled = false }) => {
+  const baseStyles = 'block w-full px-3 py-2 border rounded-md appearance-none focus:outline-none focus:ring focus:border-blue-300';
   const classes = classNames(baseStyles, className, {
     'bg-gray-100 cursor-not-allowed': disabled,
     'border-gray-300': !disabled,
@@ -33,11 +25,7 @@ const SelectBox: React.FC<SelectBoxProps> = ({
 
   return (
     <div className="relative mb-4">
-      {label && (
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {label}
-        </label>
-      )}
+      {label && <label className="block text-sm font-medium text-gray-700 mb-2">{label}</label>}
       <select
         value={value}
         onChange={onChange}
@@ -51,12 +39,7 @@ const SelectBox: React.FC<SelectBoxProps> = ({
         }}
       >
         {options.map((option) => (
-          <option
-            key={option.value}
-            value={option.value}
-            disabled={option.disabled}
-            className={classNames({ 'text-gray-400': option.disabled })}
-          >
+          <option key={option.value} value={option.value} disabled={option.disabled} className={classNames({ 'text-gray-400': option.disabled })}>
             {option.label}
           </option>
         ))}

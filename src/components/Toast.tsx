@@ -88,6 +88,7 @@ const Toast = ({ isOpen: isOpenTrigger, title, autoHideDuration, className, vari
         onClose();
       }, autoHideDuration);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpenTrigger]);
 
   useEffect(() => {

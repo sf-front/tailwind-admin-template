@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import ClickOutside from '@/components/ClickOutSide';
 import SidebarItem from './SidebarItem';
