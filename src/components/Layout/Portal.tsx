@@ -6,14 +6,14 @@ import Toast from '../Toast';
 */
 const Portal = () => {
   // recoil
-  const [{ isOpen: toastIsOpen, title: toastTitle, autoHideDuration = 3000, type: toastType }, setToastState] = useToastState();
+  const [{ isOpen: toastIsOpen, title: toastTitle, autoHideDuration = 3000, variant }, setToastState] = useToastState();
 
   // handler
   const onClose = () => {
     setToastState(toastStateInitValue);
   };
 
-  return <Toast isOpen={toastIsOpen} title={toastTitle} autoHideDuration={autoHideDuration} type={toastType} onClose={onClose} />;
+  return <Toast isOpen={toastIsOpen} title={toastTitle} autoHideDuration={autoHideDuration} variant={variant} onClose={onClose} />;
 };
 
 export default Portal;

@@ -11,7 +11,7 @@ export interface ToastProps {
   title: string;
   autoHideDuration: number;
   className?: string;
-  variant: ComponentVariantType;
+  variant?: ComponentVariantType;
   onClose: () => void;
 }
 
@@ -46,7 +46,7 @@ const fadeOutDown = `
   }
 `;
 
-const Toast = ({ isOpen: isOpenTrigger, title, autoHideDuration, className, variant, onClose }: ToastProps) => {
+const Toast = ({ isOpen: isOpenTrigger, title, autoHideDuration, className, variant = 'primary', onClose }: ToastProps) => {
   // useState
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isVisible, setIsVisible] = useState(false);
